@@ -1,11 +1,11 @@
 package com.tianma.mesos.support.exception;
 
-public class MarathonException extends Exception {
+public class ResponseException extends Exception {
 	private static final long serialVersionUID = 1L;
 	private int status;
 	private String message;
 	
-	public MarathonException(int status, String message) {
+	public ResponseException(int status, String message) {
 		this.status = status;
 		this.message = message;
 	}
