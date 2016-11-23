@@ -1,6 +1,6 @@
 package com.tianma.mesos.domain.marathon.v2;
 
-import com.tianma.mesos.support.util.MarathonModelUtils;
+import com.tianma.mesos.support.util.ModelUtils;
 
 public class GetAppResponse {
 	private App app;
@@ -15,6 +15,6 @@ public class GetAppResponse {
 
 	@Override
 	public String toString() {
-		return MarathonModelUtils.toString(this);
+		return ModelUtils.toString(this);
 	}
 }

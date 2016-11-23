@@ -2,7 +2,7 @@ package com.tianma.mesos.client.mesos;
 
 import com.tianma.mesos.auth.TokenAuthRequestInterceptor;
 import com.tianma.mesos.support.exception.ResponseException;
-import com.tianma.mesos.support.util.MesosModelUtils;
+import com.tianma.mesos.support.util.ModelUtils;
 import feign.Feign;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
@@ -46,8 +46,8 @@ public class MesosMonitorClient {
      */
     public static MesosMonitor getInstance(String endpoint, RequestInterceptor... interceptors) {
         Feign.Builder b = Feign.builder()
-                .encoder(new GsonEncoder(MesosModelUtils.GSON))
-                .decoder(new GsonDecoder(MesosModelUtils.GSON))
+                .encoder(new GsonEncoder(ModelUtils.GSON))
+                .decoder(new GsonDecoder(ModelUtils.GSON))
                 .errorDecoder(new MesosMonitorClient.MesosMonitorErrorDecoder());
         if (interceptors!=null)
             b.requestInterceptors(asList(interceptors));

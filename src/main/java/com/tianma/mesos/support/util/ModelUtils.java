@@ -7,8 +7,9 @@ import com.google.gson.GsonBuilder;
  * Created by jie on 16-11-18.
  * 驼峰格式转换为下划线格式
  */
-public class MesosModelUtils {
-    public static final Gson GSON = new GsonBuilder().disableHtmlEscaping().create();
+public class ModelUtils {
+    public static final Gson GSON = new GsonBuilder().setPrettyPrinting()
+            .disableHtmlEscaping().create();
 
     public static String toString(Object o) {
         return GSON.toJson(o);

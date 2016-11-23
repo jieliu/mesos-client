@@ -1,0 +1,70 @@
+{
+  "container": {
+    "docker": {
+      "force_pull_image": false,
+      "image": "ubuntu-jre",
+      "network": "HOST",
+      "privileged": false
+    },
+    "type": "DOCKER",
+    "volumes": [
+      {
+        "container_path": "/root/freelink",
+        "host_path": "/share/code/freelink/jar",
+        "mode": "RW"
+      }
+    ]
+  },
+  "executor_id": "",
+  "framework_id": "40ac76c0-2188-47a5-a52e-e581a61715ea-0000",
+  "id": "freelink_egoo_0.c6d179b8-7419-11e6-9060-56847afe9799",
+  "name": "0.egoo.freelink",
+  "resources": {
+    "cpus": 1,
+    "disk": 0,
+    "mem": 1024,
+    "ports": "[31557-31557]"
+  },
+  "slave_id": "287f9f8a-6740-46f0-8709-dd5fcbf96a68-S0",
+  "state": "TASK_KILLED",
+  "statuses": [
+    {
+      "container_status": {
+        "network_infos": [
+          {
+            "ip_address": "",
+            "ip_addresses": [
+              {
+                "ip_address": ""
+              }
+            ]
+          }
+        ]
+      },
+      "labels": [
+        {
+          "key": "Docker.NetworkSettings.IPAddress",
+          "value": ""
+        }
+      ],
+      "state": "TASK_RUNNING",
+      "timestamp": 1473156477.28528
+    },
+    {
+      "container_status": {
+        "network_infos": [
+          {
+            "ip_address": "10.44.94.122",
+            "ip_addresses": [
+              {
+                "ip_address": "10.44.94.122"
+              }
+            ]
+          }
+        ]
+      },
+      "state": "TASK_KILLED",
+      "timestamp": 1473158686.73402
+    }
+  ]
+}

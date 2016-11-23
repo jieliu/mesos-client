@@ -1,8 +1,7 @@
 package com.tianma.mesos.domain.mesos.v1;
 
-
 import com.google.gson.annotations.SerializedName;
-import com.tianma.mesos.support.util.MesosModelUtils;
+import com.tianma.mesos.support.util.ModelUtils;
 
 /**
  * Created by jie on 16-11-18.
@@ -42,7 +41,7 @@ public class Slave {
 
         @Override
         public String toString() {
-            return MesosModelUtils.toString(this);
+            return ModelUtils.toString(this);
         }
     }
 
@@ -89,7 +88,7 @@ public class Slave {
 
         @Override
         public String toString() {
-            return MesosModelUtils.toString(this);
+            return ModelUtils.toString(this);
         }
     }
 
@@ -229,6 +228,6 @@ public class Slave {
 
     @Override
     public String toString() {
-        return MesosModelUtils.toString(this);
+        return ModelUtils.toString(this);
     }
 }

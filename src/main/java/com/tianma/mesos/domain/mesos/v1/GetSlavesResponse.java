@@ -1,6 +1,6 @@
 package com.tianma.mesos.domain.mesos.v1;
 
-import com.tianma.mesos.support.util.MesosModelUtils;
+import com.tianma.mesos.support.util.ModelUtils;
 
 import java.util.List;
 
@@ -20,6 +20,6 @@ public class GetSlavesResponse {
 
     @Override
     public String toString() {
-        return MesosModelUtils.toString(this);
+        return ModelUtils.toString(this);
     }
 }

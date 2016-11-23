@@ -1,6 +1,6 @@
-package com.tianma.mesos.domain.marathon.v2;
+package com.tianma.mesos.domain.common;
 
-import com.tianma.mesos.support.util.MarathonModelUtils;
+import com.tianma.mesos.support.util.ModelUtils;
 
 public class Volume {
 	private String containerPath;
@@ -33,6 +33,6 @@ public class Volume {
 
 	@Override
 	public String toString() {
-		return MarathonModelUtils.toString(this);
+		return ModelUtils.toString(this);
 	}
 }
