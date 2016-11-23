@@ -1,6 +1,6 @@
 package com.tianma.mesos.domain.cluster;
 
-import com.egoo.linkcloud.mesos.domain.cluster.vmhost.VMInfo;
+import com.tianma.mesos.domain.cluster.vmhost.VMInfo;
 
 import java.util.Date;
 import java.util.List;

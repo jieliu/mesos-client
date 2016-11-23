@@ -1,6 +1,6 @@
 package com.tianma.mesos.domain.marathon.v2;
 
-import com.egoo.linkcloud.mesos.support.util.ModelUtils;
+import com.tianma.mesos.support.util.MarathonModelUtils;
 
 import java.util.Collection;
 import java.util.List;
@@ -83,7 +83,7 @@ public class Deployment {
 
 		@Override
 		public String toString() {
-			return ModelUtils.toString(this);
+			return MarathonModelUtils.toString(this);
 		}
 	}
 
@@ -109,12 +109,12 @@ public class Deployment {
 
 		@Override
 		public String toString() {
-			return ModelUtils.toString(this);
+			return MarathonModelUtils.toString(this);
 		}
 	}
 
 	@Override
 	public String toString() {
-		return ModelUtils.toString(this);
+		return MarathonModelUtils.toString(this);
 	}
 }

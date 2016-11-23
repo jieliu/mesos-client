@@ -10,7 +10,7 @@ import feign.RequestLine;
 /**
  * Created by jie on 16-11-18.
  */
-public interface MeososMonitor {
+public interface MesosMonitor {
     // Monitor
     @RequestLine("GET /version")
     MesosVersion getVersion() throws ResponseException;

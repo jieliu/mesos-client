@@ -1,6 +1,7 @@
 package com.tianma.mesos.domain.marathon.v2;
 
-import com.egoo.linkcloud.mesos.support.util.ModelUtils;
+
+import com.tianma.mesos.support.util.MarathonModelUtils;
 
 public class GetEventSubscriptionRegisterResponse {
 
@@ -29,6 +30,6 @@ public class GetEventSubscriptionRegisterResponse {
 
     @Override
     public String toString() {
-        return ModelUtils.toString(this);
+        return MarathonModelUtils.toString(this);
     }
 }

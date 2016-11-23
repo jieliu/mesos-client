@@ -1,6 +1,6 @@
 package com.tianma.mesos.domain.marathon.v2;
 
-import mesosphere.marathon.client.utils.ModelUtils;
+import com.tianma.mesos.support.util.MarathonModelUtils;
 
 import java.util.Collection;
 
@@ -17,6 +17,6 @@ public class GetGroupsResponse {
 	
 	@Override
 	public String toString() {
-		return ModelUtils.toString(this);
+		return MarathonModelUtils.toString(this);
 	}
 }

@@ -1,5 +1,8 @@
 package com.tianma.mesos.client.marathon;
 
+import com.tianma.mesos.auth.TokenAuthRequestInterceptor;
+import com.tianma.mesos.support.exception.ResponseException;
+import com.tianma.mesos.support.util.MarathonModelUtils;
 import feign.Feign;
 import feign.Feign.Builder;
 import feign.RequestInterceptor;
@@ -9,9 +12,7 @@ import feign.auth.BasicAuthRequestInterceptor;
 import feign.codec.ErrorDecoder;
 import feign.gson.GsonDecoder;
 import feign.gson.GsonEncoder;
-import mesosphere.marathon.client.auth.TokenAuthRequestInterceptor;
-import mesosphere.marathon.client.utils.MarathonException;
-import mesosphere.marathon.client.utils.ModelUtils;
+
 
 import static java.util.Arrays.asList;
 
@@ -27,7 +28,7 @@ public class MarathonClient {
 	static class MarathonErrorDecoder implements ErrorDecoder {
 		@Override
 		public Exception decode(String methodKey, Response response) {
-			return new MarathonException(response.status(), response.reason());
+			return new ResponseException(response.status(), response.reason());
 		}
 	}
 	
@@ -44,8 +45,8 @@ public class MarathonClient {
 	 */
 	public static Marathon getInstance(String endpoint, RequestInterceptor... interceptors) {
 		Builder b = Feign.builder()
-				.encoder(new GsonEncoder(ModelUtils.GSON))
-				.decoder(new GsonDecoder(ModelUtils.GSON))
+				.encoder(new GsonEncoder(MarathonModelUtils.GSON))
+				.decoder(new GsonDecoder(MarathonModelUtils.GSON))
 				.errorDecoder(new MarathonErrorDecoder());
 		if (interceptors!=null)
 			b.requestInterceptors(asList(interceptors));

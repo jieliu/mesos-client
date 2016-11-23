@@ -1,6 +1,6 @@
 package com.tianma.mesos.domain.marathon.v2;
 
-import com.egoo.linkcloud.mesos.support.util.ModelUtils;
+import com.tianma.mesos.support.util.MarathonModelUtils;
 
 public class DeleteAppTaskResponse {
 	private Task task;
@@ -15,7 +15,7 @@ public class DeleteAppTaskResponse {
 
 	@Override
 	public String toString() {
-		return ModelUtils.toString(this);
+		return MarathonModelUtils.toString(this);
 	}
 
 }
